@@ -20,6 +20,30 @@ body{
 }
 
 #welcome img {
-  width: 80%;
+  width: 20em;
   border-radius: 80%;
+}
+
+@media (min-width: 960px) {
+
+  #welcome h1 {
+    font-size: 3.4em;
+  }
+
+  #welcome img {
+    width: 22em;
+  }
+}
+
+
+@media (min-width: 1280px) {
+
+    #welcome h1 {
+      font-size: 3.8em;
+    }
+
+    #welcome img {
+      width: 26em;
+    }
+
 }
