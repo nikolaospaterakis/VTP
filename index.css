@@ -1,0 +1,25 @@
+@font-face {
+  font-family: vtp;
+  src: url(/fonts/Djournal.otf);
+}
+
+body{
+  background-color: #81c3d7;
+}
+
+#welcome {
+  font-family: vtp;
+  align-content: center;
+  text-align: center;
+}
+
+#welcome h1 {
+  font-size: 3em;
+  letter-spacing: .13em;
+  color: #03AADC;
+}
+
+#welcome img {
+  width: 80%;
+  border-radius: 80%;
+}
