@@ -3,35 +3,154 @@
   src: url(/fonts/Djournal.otf);
 }
 
+@keyframes burning {
+  0% {border-left: 2px solid #000000; }
+  50% {border-left: 2px solid #14213d; }
+  100% {border-left: 2px solid #000000; }
+}
+
 body{
-  background-color: #81c3d7;
+  background-color: #ffeedd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #welcome {
   font-family: vtp;
-  align-content: center;
+  align-items: center;
+  justify-content: space-between;
   text-align: center;
 }
 
 #welcome h1 {
-  font-size: 3em;
+  font-size: 2.2em;
   letter-spacing: .13em;
-  color: #03AADC;
+  color: #262628;
 }
 
 #welcome img {
-  width: 20em;
+  width: 12em;
   border-radius: 80%;
+}
+
+.footer {
+  padding: 1.2em;;
+  display: flex;
+  justify-content: center;
+  font-family: vtp;
+}
+
+.footer {
+  margin-top: 2em;
+}
+
+ .login,  .signup {
+  padding: 0em 1em;
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: letter-spacing 1s, color 1s;
+  color: #262628;
+  animation-name: burning;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  margin: 0em .2em
+}
+
+ .login:hover,  .signup:hover {
+  color: red;
+  letter-spacing: .12em;
+}
+
+#page-LogIn, #page-SignUp {
+  text-align: center;
+  font-family: vtp;
+}
+
+#page-LogIn form, #page-SignUp form {
+  display: flex;
+  flex-direction: column;
+  width: 30em;
+  margin: auto;
+  gap: 1em;
+  padding: 2rem;
+  box-sizing: border-box;
+  align-items: center;
+  margin-top: .2rem;
+  grid-area: "c";
+}
+
+#page-LogIn form label, #page-SignUp form label{
+  font-size: 1.8em;
+  letter-spacing: .1em;
+}
+
+#page-LogIn form input, #page-SignUp form input {
+  width: 60%;
+  padding: .6em;
+  border-radius: 2em;
+  text-transform: lowercase;
+  border: 2px solid black;
+  transition: ease-in-out;
+  transition-duration: .2s;
+}
+
+#page-LogIn form button, #page-SignUp form button {
+  font-size: 1.2em;
+  padding: .8rem 2rem;
+  border-radius: 1em;
+  border: 2px #14213d solid;
+  margin-top: 1em;
+  color: #e5e5e5;
+  background-color: #22223b;
+  transition: 1s;
+  letter-spacing: .1em;
+  width: 80%;
+  font-family: vtp;
+}
+
+#page-LogIn h3, #page-SignUp h3 {
+  margin-top: 1.6em;
+  text-shadow: 0px 0px 1px black;
+  letter-spacing: .02em;
+  font-size: 1em;
+  color: #03071e;
+}
+
+#page-LogIn form input:hover,#page-SignUp form input:hover {
+  padding: .7em;
+  border-color: red;
+}
+
+#page-LogIn form button:hover, #page-SignUp form button:hover {
+  letter-spacing: .2em;
+  padding: .8em;
+  border-color: red;
+}
+
+.link-ref:hover{
+  color: red;
+  letter-spacing: .07em;
+  transition: ease-in-out;
+  transition-duration: .5s;
 }
 
 @media (min-width: 960px) {
 
   #welcome h1 {
-    font-size: 3.4em;
+    font-size: 2.4em;
   }
 
   #welcome img {
-    width: 22em;
+    width: 16em;
+  }
+
+ .login, .signup {
+    font-size: 1.8em;
+  }
+
+  #page-LogIn form, #page-SignUp form {
+    width: 32em;
   }
 }
 
@@ -39,11 +158,18 @@ body{
 @media (min-width: 1280px) {
 
     #welcome h1 {
-      font-size: 3.8em;
+      font-size: 3.2em;
     }
 
     #welcome img {
-      width: 26em;
+      width: 22em;
     }
 
+   .login, .signup {
+      font-size: 2.2em;
+    }
+
+    #page-LogIn form, #page-SignUp form {
+      width: 35em;
+    }
 }
